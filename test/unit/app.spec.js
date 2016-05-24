@@ -35,4 +35,42 @@ describe('app', function () {
             expect(app.divide(101, 0)).toEqual(false);
         });
     });
+
+    describe('Funkcja getDescendingNumbers', function(){
+        it('should', function(){
+            expect(app.getDescendingNumbers(10,7)).toEqual('10 9 8 7');
+        });
+        it('should return false', function(){
+            expect(app.getDescendingNumbers(6,7)).toEqual(false);
+        });
+
+        it('should return false', function(){
+            expect(app.getDescendingNumbers('10','7')).toEqual(false);
+        });
+
+        it('should return false', function(){
+            expect(app.getDescendingNumbers(9,9)).toEqual(false);
+        });
+
+        it('should return false', function(){
+            expect(app.getDescendingNumbers([10],[7])).toEqual(false);
+        });
+    });
+
+    describe('Funkcja areaOfTrapezoid', function(){
+        it('should return', function(){
+            expect(app.areaOfTrapezoid(-1, 3, 4)).toEqual(false);
+        });
+
+        it('should return', function(){
+            expect(app.areaOfTrapezoid(-1, -3, -4)).toEqual(false);
+        });
+
+        it('should return', function(){
+            expect(app.areaOfTrapezoid(1, 1, 2)).toEqual(2);
+        })
+        
+    });
+
+
 });
